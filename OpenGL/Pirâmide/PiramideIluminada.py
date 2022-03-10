@@ -52,19 +52,11 @@ def Piramide():
     i = 0
     for face in faces:
         glNormal3fv(calculaNormalFace(face))
-#        glColor3fv(cores[i%len(cores)])
         for vertex in face:
-            #glColor3fv(cores[vertex])
             glVertex3fv(vertices[vertex])
         i = i+1
     glEnd()
  
-#    glColor3fv((0,0.5,0))
-#    glBegin(GL_LINES)
-#    for linha in linhas:
-#        for vertice in linha:
-#            glVertex3fv(vertices[vertice])
-#    glEnd()
  
 def display():
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
@@ -104,7 +96,7 @@ def init():
     glEnable(GL_MULTISAMPLE)
 
  
-# PROGRAMA PRINCIPAL
+
 glutInit(sys.argv)
 glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE)
 glutInitWindowSize(800,600)
