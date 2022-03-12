@@ -4,9 +4,6 @@ from OpenGL.GLU import *
 import sys
 import png
 
-window = 0
-
-
 xrot = yrot = zrot = 0.0
 dx = 0.1
 dy = 0
